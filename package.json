@@ -1,0 +1,31 @@
+{
+  "name": "mini-three-way-match",
+  "version": "1.0.0",
+  "description": "A small TypeScript program that checks whether a Purchase Order, Goods Received Note and Invoice agree.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zazah1233/mini-three-way-match.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/zazah1233/mini-three-way-match/issues"
+  },
+  "homepage": "https://github.com/zazah1233/mini-three-way-match#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.14.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2",
+    "vitest": "^5.1.0"
+  }
+}
