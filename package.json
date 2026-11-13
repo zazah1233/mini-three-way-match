@@ -6,7 +6,8 @@
   "scripts": {
     "test": "vitest run",
     "lint": "eslint src",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "demo": "tsx src/demo.ts"
   },
   "repository": {
     "type": "git",
