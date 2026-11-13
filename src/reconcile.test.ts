@@ -64,4 +64,18 @@ describe("reconcile", () => {
     const result = reconcile(po, grn, invoice);
     expect(result.status).toBe("OK");
   });
+    it("flags a phantom item billed but never received", () => {
+    const [po, grn, invoice] = makeDocs();
+    // Add a SKU to the invoice that has no GRN line
+    invoice.lineItems.push({
+      sku: "RICE-BAG",
+      description: "Bag of rice",
+      quantity: 10,
+      unitPrice: 800,
+    });
+    const result = reconcile(po, grn, invoice);
+    expect(result.status).toBe("FLAGGED");
+    const phantom = result.lines.find((l) => l.sku === "RICE-BAG");
+    expect(phantom?.notes.join(" ")).toContain("Phantom item");
+  });
 });
