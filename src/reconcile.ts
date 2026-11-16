@@ -58,7 +58,7 @@ export function reconcile(
     }
 
     const quantityVariance =
-         (grnLine.quantity - invLine.quantity) / grnLine.quantity;
+        (invLine.quantity - grnLine.quantity) / grnLine.quantity;
 
     const poPrice = poLine?.unitPrice ?? invLine.unitPrice ?? 0;
     const priceVariance =
